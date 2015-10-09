@@ -1,0 +1,6 @@
+pdf(width=11,height=7,file="Income_Share5.pdf")
+plot(US.Top.Share$Year,US.Top.Share$P99.9.100,ylim=c(0,10),xlab="Year",ylab="% of Income Share",type="l")
+lines(US.Top.Share$Year,US.Top.Share$P99.99.100,ylim=c(0,10),lty=5)
+lines(US.Top.Share$Year,US.Top.Share$P99.9.99.99,ylim=c(0,10),lty=2)
+legend(1950,10, legend=c("99.9~100%","99.99~100%","99.9~99.99%"),lty=c(1,5,2))
+dev.off()
